@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Document Form</title>
+</head>
+<body>
+<h1>Реквизиты входящего документа</h1>
+<form th:action="@{/api/documents}" method="post" enctype="multipart/form-data">
+  <!-- Поля формы -->
+  <label for="regNumber">Рег. №:</label>
+  <input type="text" id="regNumber" name="regNumber" required><br>
+
+  <label for="regDate">Дата рег.:</label>
+  <input type="date" id="regDate" name="regDate" required><br>
+
+  <!-- Остальные поля формы -->
+
+  <label for="fileUpload">Файл:</label>
+  <input type="file" id="fileUpload" name="fileUpload" required><br>
+
+  <button type="submit">Сохранить</button>
+</form>
+</body>
+</html>
